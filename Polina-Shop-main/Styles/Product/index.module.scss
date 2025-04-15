@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.productCard {
+    display: flex;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    color: #333;
+    margin-top: 20px;
+    
+
+    .imageContainer {
+        display: flex;
+        flex-direction: row; /* Изменено на row для размещения маленьких изображений слева */
+        align-items: center;
+
+        .thumbnailContainer {
+            display: flex;
+            flex-direction: column; /* Изменено на column для вертикального размещения маленьких изображений */
+            margin-right: 10px; /* Изменено на margin-right для отступа между маленькими изображениями */
+
+            .thumbnail {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 4px;
+                margin-bottom: 10px; /* Изменено на margin-bottom для вертикального размещения */
+                cursor: pointer;
+            }
+        }
+
+        .mainImage {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .productInfo {
+        margin-top: 70px;
+        margin-left: 80px; /* Добавлено для размещения информации справа от большой картинки */
+
+        h2 {
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        .colorOptions {
+            display: flex;
+            margin-top: 10px;
+
+            .colorCircle {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: transform 0.3s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            .dark {
+                background-color: #333;
+            }
+
+            .white {
+                background-color: #fff;
+            }
+
+            .goldBrown {
+                background-color: #b08d57;
+            }
+        }
+
+        .sizeOptions {
+            display: flex;
+            margin-top: 70px;
+
+            .sizeCircle {
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 2px solid #333;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: transform 0.3s;
+
+                &.selected {
+                    background-color: #272727;
+                    color: white;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+            
+        }
+        .sizeOptions {
+            display: flex;
+            margin-top: 60px;
+
+            .sizeCircle {
+                display: inline-block;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 0%;
+                border: 1px solid #333;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: transform 0.3s;
+
+                &.selected {
+                    background-color: #272727;
+                    color: white;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .addToCartBtn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: #272727;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .productCard {
+            flex-direction: column;
+        }
+        .imageContainer {
+            flex-direction: vertica; 
+        }
+
+        .productInfo {
+            margin-top: 200px; /* Отступ
+            от маленьких картинок */
+            margin-left: 0; /* Убираем отступ слева для блока с информацией */
+            order: 1;
+        }
+        
+    }
+
+
+
+
+

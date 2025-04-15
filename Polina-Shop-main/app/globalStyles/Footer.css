@@ -1,0 +1,108 @@
+.footer {
+    margin-top: auto;
+  }
+  
+  .footer__top {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+  }
+  
+  .footer__top__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer__logo,
+  .footer__image {
+    flex: 0 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .footer__socials {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .footer__socials__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer__image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer__socials__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer__socials__item {
+    margin: 0 10px;
+  }
+  
+  .footer__socials__item__link {
+    position: relative;
+    display: block;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .footer__socials__item__link__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #0b0b0b;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+  
+  .footer__socials__item:first-child .footer__socials__item__link__icon {
+    mask-image: url(/img/instagram.svg);
+  }
+  
+  .footer__socials__item:nth-child(2) .footer__socials__item__link__icon {
+    mask-image: url(/img/tiktok.svg);
+  }
+  
+  .footer__socials__item:last-child .footer__socials__item__link__icon {
+    mask-image: url(/img/facebook.svg);
+  }
+  
+  .footer__socials__item__link:hover {
+    border-color: #9c9c9c;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .footer__socials__item__link:hover .footer__socials__item__link__icon {
+    background-color: #9c9c9c;
+  }
+  
+  @media (max-width: 768px) {
+    .footer__top__container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer__logo,
+    .footer__socials,
+    .footer__image {
+      margin-bottom: 20px;
+    }
+  
+    .footer__image {
+      order: 1;
+    }
+  }

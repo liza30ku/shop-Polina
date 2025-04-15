@@ -1,0 +1,31 @@
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #E8E9EA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.share-overlay
+.over-flow-hidden{
+  overflow-y: hidden;
+  padding-right: 8px;
+}
